@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffdfd6, #feb47b); /* Colorful gradient background */    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 360px;
+    background: linear-gradient(135deg, #6a5fff, #ca7bfe);  /* Slightly transparent background */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    /* background: linear-gradient(135deg, #1a1a1a, #333333); Dark gradient for the display */
+    background: #0007;
+    color: #ffffff; /* White text color */
+    font-size: 48px;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.expression {
+    color: #ffffff; /* White text color */
+    background: #fff3; /* Transparent background */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 24px; /* Smaller font size for expression */
+    text-align: right; /* Right-align text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+button {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 24px;
+    color: white;
+    background: linear-gradient(135deg, #ff6a6a, #ffb299); /* Colorful button gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff8e8e, #ffcc99); /* Lighter hover gradient */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn.operator {
+    background: linear-gradient(135deg, #ff9f00, #ffdc00); /* Operator button gradient */
+}
+
+.btn.operator:hover {
+    background: linear-gradient(135deg, #ffc300, #ffe600); /* Operator hover gradient */
+}
+
+.btn.zero {
+    grid-column: span 2; /* For zero button */
+}
+
+.btn:active {
+    transform: translateY(2px); /* Press down effect */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Change to 4 columns for better layout */
+}
+
+.set1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-set {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    > div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.eq {
+    width: 150px; /* Ensures the parent takes full width */
+    grid-column: span 2; /* Ensure it spans two columns */
+}
+
+.eq button {
+    width: 100%; /* Make the button full width */
+    background-color: #ff9500; /* Optional: matches operator button color */
+    color: white; /* Optional: for better contrast */
+}
+
+.big-btn > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+p {
+    color: white;
+    margin-top: 15px;
+    font-weight: 700;
+}
