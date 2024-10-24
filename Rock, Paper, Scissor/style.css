@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#result {
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
